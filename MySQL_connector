@@ -1,0 +1,10 @@
+import mysql.connector
+print("łączenie z bazą Ptaki. - próba")
+connection = mysql.connector.connect(user='root', password='',host='127.0.0.1',database ='ptaki',auth_plugin='mysql_native_password')
+zapytanie="SELECT nazwa_zwyczajowa FROM gatunki WHERE nazwa_zwyczajowa LIKE 'B%'"
+print("Połączono z bazą Ptaki. - sukces")
+kursor= connection.cursor()
+kursor.execute(zapytanie)
+
+for row in kursor:
+    print(row)

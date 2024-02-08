@@ -1,0 +1,14 @@
+import pypyodbc  as odbc
+DRIVER_NAME = 'SQL SERVER'
+SERVER_NAME = 'DESKTOP-5HEDI95'
+DATABASE_NAME = 'Ptaki'
+
+connection_string = f"""
+    DRIVER={{{DRIVER_NAME}}};
+    SERVER={SERVER_NAME};
+    DATABASE={DATABASE_NAME};
+    uid='sa'
+    pwd='gosia'
+"""
+conn = odbc.connect(connection_string)
+print(conn)

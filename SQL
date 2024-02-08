@@ -1,0 +1,7 @@
+import pyodbc
+
+server="DESKTOP-5HEDI95\MSSQLSERVER"
+database="PrzepisyPrzyklad"
+user="sa"
+haslo="gosia"
+conn_string="Driver={{SQL Server}};Server={0};Database={1};Uid={2};"
